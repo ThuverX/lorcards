@@ -1,0 +1,150 @@
+@font-face {
+  font-family: Friz Quadrata;
+  src: url("src/Friz Quadrata Regular.ttf");
+}
+@font-face {
+  font-family: Confidel;
+  src: url("src/confidel.otf");
+}
+:root {
+  font-size: 1vw;
+}
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: Confidel;
+  background: url("src/background.jpg") center / cover no-repeat;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.topbar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 4rem;
+  background: url("src/center.png") top / 20px 4rem;
+  color: #e3bf69;
+  overflow: hidden;
+  z-index: 800;
+  font-size: 2rem;
+}
+.topbar:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  background: url("src/left.png") left / 100px 4rem no-repeat;
+  z-index: -1;
+}
+.topbar:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  background: url("src/right.png") right / 100px 4rem no-repeat;
+  z-index: -1;
+}
+.topbar .titleCard {
+  width: 10%;
+  height: calc(4rem + 5px);
+  background: url("src/logo.png") center / 75% no-repeat;
+  float: left;
+}
+.topbar .button {
+  position: relative;
+  float: left;
+  line-height: calc(4rem + 5px);
+  padding: 0 2rem;
+  height: calc(4rem + 5px);
+  cursor: pointer;
+  background: url("src/center.png") top / 20px 4rem;
+  transition: filter 0.2s;
+}
+.topbar .button.login {
+  margin-right: 100px;
+}
+.topbar .button:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -0.1rem;
+  width: 100%;
+  height: 4rem;
+  background: url("src/arrow.png") center top / 1.2rem 4rem no-repeat;
+  opacity: 0;
+  transition: top 0.2s, opacity 0.2s;
+}
+.topbar .button:hover {
+  filter: brightness(120%);
+}
+.topbar .button:hover:after {
+  top: 0;
+  opacity: 1;
+}
+.topbar .login,
+.topbar .register {
+  float: right;
+}
+::-webkit-scrollbar,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
+  background: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  background: black;
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cba152;
+  width: 5px;
+  border: 7px solid black;
+  border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #eee1c8;
+}
+.cardList {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 90%;
+  height: calc(100% - 6rem);
+  overflow-y: auto;
+  z-index: 400;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 4rem;
+  padding-top: 2rem;
+}
+.cardList .card {
+  margin: 1rem;
+  height: 15rem;
+  width: 10rem;
+  float: left;
+  background: url("http://dd.b.pvp.net/1_2_0/set2/en_us/img/cards/02PZ001.png") center / contain no-repeat;
+  transition: transform 0.2s, filter 0.2s;
+  filter: brightness(90%);
+  cursor: pointer;
+}
+.cardList .card:hover {
+  transform: scale(1.2);
+  filter: brightness(140%);
+  z-index: 500;
+}
+.cardList .region {
+  font-family: Friz Quadrata;
+  font-size: 4rem;
+  color: white;
+  float: left;
+  width: 100%;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+}
