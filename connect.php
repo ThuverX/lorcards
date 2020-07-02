@@ -5,6 +5,8 @@ $dBUsername ="root";
 $dBPassword ="";
 $dBName ="lorcards";
 
-$conn = new PDO("mysql:host=$servername;dbname=$dBName", $dBUsername, $dBPassword);
+$pdo = new PDO("mysql:host=$servername;dbname=$dBName", $dBUsername, $dBPassword);
+
+session_start();
 
 ?>
